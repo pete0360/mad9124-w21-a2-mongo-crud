@@ -3,17 +3,29 @@
   "version": "0.1.0",
   "description": "",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=week07* nodemon server.js"
   },
   "keywords": [
     "MAD9124",
     "W21"
   ],
-  "author": "",
+  "author": "Ben Peterkins",
   "contributors": [
-    "Robert McKenney <mckennr@algonquincollege.com>"
+    "Ben Peterkins <pete036@algonquinlive.com>"
   ],
   "license": "ISC",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.2",
+    "mongoose": "^5.11.19",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+  
 }
