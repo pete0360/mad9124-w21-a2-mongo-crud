@@ -8,8 +8,8 @@ import sanitizeMongo from 'express-mongo-sanitize'
 import connectDatabase from './startup/connectDataBase.js'
 connectDatabase()
 
-import connectStudents from './routes/students.js'
-import connectCourses from './routes/courses.js'
+
+import connectClasses from './routes/classes.js'
 
 const app = express()
 
@@ -17,8 +17,8 @@ app.use(morgan('tiny'))
 app.use(express.json())
 app.use(sanitizeMongo())
 
-app.use('/api/students', connectStudents())
-app.use('/api/courses', connectCourses())
+
+app.use('/api/', connectClasses())
 
 
 export default app
